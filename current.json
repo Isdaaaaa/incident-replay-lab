@@ -5,7 +5,7 @@
   "branch": "main",
   "status": "ready-to-assign",
   "baton": "pf-pm",
-  "notes": "Assigned SLICES/third-slice.md to pf-build; awaiting STARTED/DONE lifecycle posts.",
+  "notes": "unified-event-model completed; timeline-ui ready to assign.",
   "previous_slice": "unified-event-model",
   "previous_pr": "https://github.com/Isdaaaaa/incident-replay-lab/pull/2"
 }
