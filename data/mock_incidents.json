@@ -1,0 +1,23 @@
+[
+  {
+    "id": "inc-001",
+    "service": "auth-service",
+    "severity": "critical",
+    "message": "Authentication DB connection lost",
+    "timestamp": "2026-03-18T18:58:26.553Z"
+  },
+  {
+    "id": "inc-002",
+    "service": "payment-gateway",
+    "severity": "major",
+    "message": "Payment retries increased above threshold",
+    "timestamp": "2026-03-18T23:28:26.553Z"
+  },
+  {
+    "id": "inc-003",
+    "service": "search-indexer",
+    "severity": "minor",
+    "message": "Indexing lag detected",
+    "timestamp": "2026-03-18T23:53:26.553Z"
+  }
+]
