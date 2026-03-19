@@ -11,7 +11,8 @@
     "generate:normalized-v2": "ts-node --project tsconfig.scripts.json scripts/convert_mock_data.ts",
     "generate:v3-events": "npx ts-node --project tsconfig.scripts.json scripts/generate_v3_events.ts",
     "test": "ts-node --project tsconfig.scripts.json scripts/test_normalized_v2.ts",
-    "test:normalized": "ts-node --project tsconfig.scripts.json scripts/test_normalized_v2.ts"
+    "test:normalized": "ts-node --project tsconfig.scripts.json scripts/test_normalized_v2.ts",
+    "smoke": "./scripts/smoke_check.sh http://localhost:3000"
   },
   "dependencies": {
     "next": "13.4.10",
