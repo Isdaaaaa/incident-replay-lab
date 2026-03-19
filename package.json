@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start -p 3000",
     "generate:incidents": "ts-node --project tsconfig.scripts.json scripts/generate_incidents.ts",
-    "generate:normalized": "ts-node --project tsconfig.scripts.json scripts/convert_mock_data.ts"
+    "generate:normalized": "ts-node --project tsconfig.scripts.json scripts/convert_mock_data.ts",
+    "generate:normalized-v2": "ts-node --project tsconfig.scripts.json scripts/convert_mock_data.ts",
+    "test": "ts-node --project tsconfig.scripts.json scripts/test_normalized_v2.ts",
+    "test:normalized": "ts-node --project tsconfig.scripts.json scripts/test_normalized_v2.ts"
   },
   "dependencies": {
     "next": "13.4.10",

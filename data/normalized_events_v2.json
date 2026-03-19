@@ -1,0 +1,197 @@
+[
+  {
+    "id": "inc-001-incident",
+    "timestamp": "2026-03-18T18:58:26.553Z",
+    "service": "auth-service",
+    "kind": "incident",
+    "severity": "critical",
+    "message": "Authentication DB connection lost",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 0
+    }
+  },
+  {
+    "id": "inc-001-alert",
+    "timestamp": "2026-03-18T18:59:26.553Z",
+    "service": "auth-service",
+    "kind": "alert",
+    "severity": "critical",
+    "message": "auth-service alert fired for Authentication DB connection lost",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 1
+    }
+  },
+  {
+    "id": "inc-001-trace",
+    "timestamp": "2026-03-18T19:00:26.553Z",
+    "service": "auth-service",
+    "kind": "trace",
+    "severity": "critical",
+    "message": "Trace captured for auth-service around inc-001",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 2
+    }
+  },
+  {
+    "id": "inc-001-deploy",
+    "timestamp": "2026-03-18T19:01:26.553Z",
+    "service": "auth-service",
+    "kind": "deploy",
+    "severity": "critical",
+    "message": "Deploy context recorded for auth-service",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 3
+    }
+  },
+  {
+    "id": "inc-001-note",
+    "timestamp": "2026-03-18T19:02:26.553Z",
+    "service": "auth-service",
+    "kind": "note",
+    "severity": "info",
+    "message": "Responder note attached to inc-001",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 4
+    }
+  },
+  {
+    "id": "inc-002-incident",
+    "timestamp": "2026-03-18T23:28:26.553Z",
+    "service": "payment-gateway",
+    "kind": "incident",
+    "severity": "major",
+    "message": "Payment retries increased above threshold",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 0
+    }
+  },
+  {
+    "id": "inc-002-alert",
+    "timestamp": "2026-03-18T23:29:26.553Z",
+    "service": "payment-gateway",
+    "kind": "alert",
+    "severity": "major",
+    "message": "payment-gateway alert fired for Payment retries increased above threshold",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 1
+    }
+  },
+  {
+    "id": "inc-002-trace",
+    "timestamp": "2026-03-18T23:30:26.553Z",
+    "service": "payment-gateway",
+    "kind": "trace",
+    "severity": "major",
+    "message": "Trace captured for payment-gateway around inc-002",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 2
+    }
+  },
+  {
+    "id": "inc-002-deploy",
+    "timestamp": "2026-03-18T23:31:26.553Z",
+    "service": "payment-gateway",
+    "kind": "deploy",
+    "severity": "major",
+    "message": "Deploy context recorded for payment-gateway",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 3
+    }
+  },
+  {
+    "id": "inc-002-note",
+    "timestamp": "2026-03-18T23:32:26.553Z",
+    "service": "payment-gateway",
+    "kind": "note",
+    "severity": "info",
+    "message": "Responder note attached to inc-002",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 4
+    }
+  },
+  {
+    "id": "inc-003-incident",
+    "timestamp": "2026-03-18T23:53:26.553Z",
+    "service": "search-indexer",
+    "kind": "incident",
+    "severity": "minor",
+    "message": "Indexing lag detected",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 0
+    }
+  },
+  {
+    "id": "inc-003-alert",
+    "timestamp": "2026-03-18T23:54:26.553Z",
+    "service": "search-indexer",
+    "kind": "alert",
+    "severity": "minor",
+    "message": "search-indexer alert fired for Indexing lag detected",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 1
+    }
+  },
+  {
+    "id": "inc-003-trace",
+    "timestamp": "2026-03-18T23:55:26.553Z",
+    "service": "search-indexer",
+    "kind": "trace",
+    "severity": "minor",
+    "message": "Trace captured for search-indexer around inc-003",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 2
+    }
+  },
+  {
+    "id": "inc-003-deploy",
+    "timestamp": "2026-03-18T23:56:26.553Z",
+    "service": "search-indexer",
+    "kind": "deploy",
+    "severity": "minor",
+    "message": "Deploy context recorded for search-indexer",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 3
+    }
+  },
+  {
+    "id": "inc-003-note",
+    "timestamp": "2026-03-18T23:57:26.553Z",
+    "service": "search-indexer",
+    "kind": "note",
+    "severity": "info",
+    "message": "Responder note attached to inc-003",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 4
+    }
+  }
+]

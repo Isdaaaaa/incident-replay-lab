@@ -1,75 +1,25 @@
 import fs from 'fs'
 import path from 'path'
-import { Event } from '../src/models/event'
+import { normalizeMockIncidents } from '../src/adapters/mockIncidentAdapter'
+import { MockIncident } from '../src/models/event'
 
-function loadMock(): any[] {
-  const p = path.join(process.cwd(), 'data', 'mock_incidents.json')
-  const raw = fs.readFileSync(p, 'utf8')
-  return JSON.parse(raw)
+const root = process.cwd()
+const sourcePath = path.join(root, 'data', 'mock_incidents.json')
+const outputPath = path.join(root, 'data', 'normalized_events_v2.json')
+
+export function loadMockIncidents(): MockIncident[] {
+  return JSON.parse(fs.readFileSync(sourcePath, 'utf8')) as MockIncident[]
 }
 
-function transform(mock: any[]): Event[] {
-  const out: Event[] = []
-  let counter = 1
-  for (const m of mock) {
-    // base incident -> Event of kind 'incident'
-    out.push({
-      id: `ev-${String(counter++).padStart(3,'0')}`,
-      kind: 'incident',
-      source: m.service || 'unknown',
-      severity: m.severity || 'info',
-      title: m.message || 'incident',
-      details: JSON.stringify(m),
-      timestamp: m.timestamp || new Date().toISOString(),
-      meta: { originalId: m.id }
-    })
+export function writeNormalizedEvents() {
+  const incidents = loadMockIncidents()
+  const events = normalizeMockIncidents(incidents)
 
-    // create an alert event derived from the incident
-    out.push({
-      id: `ev-${String(counter++).padStart(3,'0')}`,
-      kind: 'alert',
-      source: m.service || 'unknown',
-      severity: m.severity || 'info',
-      title: `${m.service} alert`,
-      details: `Auto-generated alert for ${m.id}`,
-      timestamp: m.timestamp || new Date().toISOString(),
-      meta: { originalId: m.id }
-    })
-
-    // add a low-severity note event
-    out.push({
-      id: `ev-${String(counter++).padStart(3,'0')}`,
-      kind: 'note',
-      source: m.service || 'unknown',
-      title: `Note for ${m.id}`,
-      details: `Investigate: ${m.message}`,
-      timestamp: new Date(new Date(m.timestamp).getTime() + 60*1000).toISOString(),
-      meta: { derivedFrom: m.id }
-    })
-  }
-
-  // ensure we have at least 10 events; duplicate with small time offsets if needed
-  while (out.length < 10) {
-    const sample = out[Math.floor(Math.random()*out.length)]
-    const copy = { ...sample, id: `ev-${String(counter++).padStart(3,'0')}`, timestamp: new Date(new Date(sample.timestamp).getTime() + Math.floor(Math.random()*600000)).toISOString() }
-    out.push(copy)
-  }
-
-  // sort by timestamp
-  out.sort((a,b)=> new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime())
-  return out
+  fs.writeFileSync(outputPath, JSON.stringify(events, null, 2))
+  return { outputPath, count: events.length, events }
 }
 
-function write(out: Event[]) {
-  const p = path.join(process.cwd(), 'data', 'normalized_events.json')
-  fs.writeFileSync(p, JSON.stringify(out, null, 2), 'utf8')
-  console.log(`Wrote ${out.length} events to ${p}`)
+if (require.main === module) {
+  const result = writeNormalizedEvents()
+  console.log(`Wrote ${result.count} events to ${result.outputPath}`)
 }
-
-function main(){
-  const mock = loadMock()
-  const normalized = transform(mock)
-  write(normalized)
-}
-
-if (require.main === module) main()
