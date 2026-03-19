@@ -2,7 +2,7 @@ export type EventKind = 'incident' | 'alert' | 'deploy' | 'trace' | 'log' | 'not
 
 export type EventSeverity = 'critical' | 'major' | 'minor' | 'warning' | 'info'
 
-export type EventSource = 'mock-incidents'
+export type EventSource = 'mock-incidents' | 'mock-alerts' | 'mock-deploys' | 'mock-traces' | 'mock-logs' | 'mock-chat'
 
 export type Event = {
   id: string
@@ -19,6 +19,49 @@ export type MockIncident = {
   id: string
   service: string
   severity: EventSeverity
+  message: string
+  timestamp: string
+}
+
+export type MockAlert = {
+  id: string
+  service: string
+  severity: EventSeverity
+  alertName: string
+  description: string
+  timestamp: string
+}
+
+export type MockDeploy = {
+  id: string
+  service: string
+  severity: Exclude<EventSeverity, 'info'>
+  version: string
+  environment: string
+  timestamp: string
+}
+
+export type MockTrace = {
+  id: string
+  service: string
+  severity: EventSeverity
+  operation: string
+  durationMs: number
+  timestamp: string
+}
+
+export type MockLog = {
+  id: string
+  service: string
+  severity: EventSeverity
+  summary: string
+  timestamp: string
+}
+
+export type MockChatNote = {
+  id: string
+  service: string
+  author: string
   message: string
   timestamp: string
 }

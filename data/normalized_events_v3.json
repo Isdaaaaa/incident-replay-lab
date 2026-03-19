@@ -1,0 +1,386 @@
+[
+  {
+    "id": "inc-001-incident",
+    "timestamp": "2026-03-18T18:58:26.553Z",
+    "service": "auth-service",
+    "kind": "incident",
+    "severity": "critical",
+    "message": "Authentication DB connection lost",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 0
+    }
+  },
+  {
+    "id": "inc-001-alert",
+    "timestamp": "2026-03-18T18:59:26.553Z",
+    "service": "auth-service",
+    "kind": "alert",
+    "severity": "critical",
+    "message": "auth-service alert fired for Authentication DB connection lost",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 1
+    }
+  },
+  {
+    "id": "inc-001-trace",
+    "timestamp": "2026-03-18T19:00:26.553Z",
+    "service": "auth-service",
+    "kind": "trace",
+    "severity": "critical",
+    "message": "Trace captured for auth-service around inc-001",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 2
+    }
+  },
+  {
+    "id": "inc-001-deploy",
+    "timestamp": "2026-03-18T19:01:26.553Z",
+    "service": "auth-service",
+    "kind": "deploy",
+    "severity": "critical",
+    "message": "Deploy context recorded for auth-service",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 3
+    }
+  },
+  {
+    "id": "inc-001-note",
+    "timestamp": "2026-03-18T19:02:26.553Z",
+    "service": "auth-service",
+    "kind": "note",
+    "severity": "info",
+    "message": "Responder note attached to inc-001",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-001",
+      "minuteOffset": 4
+    }
+  },
+  {
+    "id": "alert-inc-001",
+    "timestamp": "2026-03-18T19:04:26.553Z",
+    "service": "auth-service",
+    "kind": "alert",
+    "severity": "critical",
+    "message": "auth-service-synthetic-alert-1: Threshold breach linked to Authentication DB connection lost",
+    "source": "mock-alerts",
+    "metadata": {
+      "alertName": "auth-service-synthetic-alert-1",
+      "description": "Threshold breach linked to Authentication DB connection lost"
+    }
+  },
+  {
+    "id": "deploy-inc-001",
+    "timestamp": "2026-03-18T19:07:26.553Z",
+    "service": "auth-service",
+    "kind": "deploy",
+    "severity": "critical",
+    "message": "Deploy 2026.03.19 to production",
+    "source": "mock-deploys",
+    "metadata": {
+      "version": "2026.03.19",
+      "environment": "production"
+    }
+  },
+  {
+    "id": "trace-inc-001",
+    "timestamp": "2026-03-18T19:10:26.553Z",
+    "service": "auth-service",
+    "kind": "trace",
+    "severity": "critical",
+    "message": "POST /login completed in 240ms",
+    "source": "mock-traces",
+    "metadata": {
+      "operation": "POST /login",
+      "durationMs": 240
+    }
+  },
+  {
+    "id": "log-inc-001",
+    "timestamp": "2026-03-18T19:13:26.553Z",
+    "service": "auth-service",
+    "kind": "log",
+    "severity": "critical",
+    "message": "Log correlation for inc-001: retry_count=2",
+    "source": "mock-logs",
+    "metadata": {
+      "summary": "Log correlation for inc-001: retry_count=2"
+    }
+  },
+  {
+    "id": "note-inc-001",
+    "timestamp": "2026-03-18T19:16:26.553Z",
+    "service": "auth-service",
+    "kind": "note",
+    "severity": "info",
+    "message": "oncall-bot: Investigating inc-001; latest status shared with the room.",
+    "source": "mock-chat",
+    "metadata": {
+      "author": "oncall-bot"
+    }
+  },
+  {
+    "id": "inc-002-incident",
+    "timestamp": "2026-03-18T23:28:26.553Z",
+    "service": "payment-gateway",
+    "kind": "incident",
+    "severity": "major",
+    "message": "Payment retries increased above threshold",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 0
+    }
+  },
+  {
+    "id": "inc-002-alert",
+    "timestamp": "2026-03-18T23:29:26.553Z",
+    "service": "payment-gateway",
+    "kind": "alert",
+    "severity": "major",
+    "message": "payment-gateway alert fired for Payment retries increased above threshold",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 1
+    }
+  },
+  {
+    "id": "inc-002-trace",
+    "timestamp": "2026-03-18T23:30:26.553Z",
+    "service": "payment-gateway",
+    "kind": "trace",
+    "severity": "major",
+    "message": "Trace captured for payment-gateway around inc-002",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 2
+    }
+  },
+  {
+    "id": "inc-002-deploy",
+    "timestamp": "2026-03-18T23:31:26.553Z",
+    "service": "payment-gateway",
+    "kind": "deploy",
+    "severity": "major",
+    "message": "Deploy context recorded for payment-gateway",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 3
+    }
+  },
+  {
+    "id": "inc-002-note",
+    "timestamp": "2026-03-18T23:32:26.553Z",
+    "service": "payment-gateway",
+    "kind": "note",
+    "severity": "info",
+    "message": "Responder note attached to inc-002",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-002",
+      "minuteOffset": 4
+    }
+  },
+  {
+    "id": "alert-inc-002",
+    "timestamp": "2026-03-18T23:35:26.553Z",
+    "service": "payment-gateway",
+    "kind": "alert",
+    "severity": "major",
+    "message": "payment-gateway-synthetic-alert-2: Threshold breach linked to Payment retries increased above threshold",
+    "source": "mock-alerts",
+    "metadata": {
+      "alertName": "payment-gateway-synthetic-alert-2",
+      "description": "Threshold breach linked to Payment retries increased above threshold"
+    }
+  },
+  {
+    "id": "deploy-inc-002",
+    "timestamp": "2026-03-18T23:38:26.553Z",
+    "service": "payment-gateway",
+    "kind": "deploy",
+    "severity": "major",
+    "message": "Deploy 2026.03.20 to staging",
+    "source": "mock-deploys",
+    "metadata": {
+      "version": "2026.03.20",
+      "environment": "staging"
+    }
+  },
+  {
+    "id": "trace-inc-002",
+    "timestamp": "2026-03-18T23:41:26.553Z",
+    "service": "payment-gateway",
+    "kind": "trace",
+    "severity": "major",
+    "message": "POST /checkout completed in 350ms",
+    "source": "mock-traces",
+    "metadata": {
+      "operation": "POST /checkout",
+      "durationMs": 350
+    }
+  },
+  {
+    "id": "log-inc-002",
+    "timestamp": "2026-03-18T23:44:26.553Z",
+    "service": "payment-gateway",
+    "kind": "log",
+    "severity": "major",
+    "message": "Log correlation for inc-002: retry_count=3",
+    "source": "mock-logs",
+    "metadata": {
+      "summary": "Log correlation for inc-002: retry_count=3"
+    }
+  },
+  {
+    "id": "note-inc-002",
+    "timestamp": "2026-03-18T23:47:26.553Z",
+    "service": "payment-gateway",
+    "kind": "note",
+    "severity": "info",
+    "message": "sam: Investigating inc-002; latest status shared with the room.",
+    "source": "mock-chat",
+    "metadata": {
+      "author": "sam"
+    }
+  },
+  {
+    "id": "inc-003-incident",
+    "timestamp": "2026-03-18T23:53:26.553Z",
+    "service": "search-indexer",
+    "kind": "incident",
+    "severity": "minor",
+    "message": "Indexing lag detected",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 0
+    }
+  },
+  {
+    "id": "inc-003-alert",
+    "timestamp": "2026-03-18T23:54:26.553Z",
+    "service": "search-indexer",
+    "kind": "alert",
+    "severity": "minor",
+    "message": "search-indexer alert fired for Indexing lag detected",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 1
+    }
+  },
+  {
+    "id": "inc-003-trace",
+    "timestamp": "2026-03-18T23:55:26.553Z",
+    "service": "search-indexer",
+    "kind": "trace",
+    "severity": "minor",
+    "message": "Trace captured for search-indexer around inc-003",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 2
+    }
+  },
+  {
+    "id": "inc-003-deploy",
+    "timestamp": "2026-03-18T23:56:26.553Z",
+    "service": "search-indexer",
+    "kind": "deploy",
+    "severity": "minor",
+    "message": "Deploy context recorded for search-indexer",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 3
+    }
+  },
+  {
+    "id": "inc-003-note",
+    "timestamp": "2026-03-18T23:57:26.553Z",
+    "service": "search-indexer",
+    "kind": "note",
+    "severity": "info",
+    "message": "Responder note attached to inc-003",
+    "source": "mock-incidents",
+    "metadata": {
+      "originalIncidentId": "inc-003",
+      "minuteOffset": 4
+    }
+  },
+  {
+    "id": "alert-inc-003",
+    "timestamp": "2026-03-19T00:01:26.553Z",
+    "service": "search-indexer",
+    "kind": "alert",
+    "severity": "minor",
+    "message": "search-indexer-synthetic-alert-3: Threshold breach linked to Indexing lag detected",
+    "source": "mock-alerts",
+    "metadata": {
+      "alertName": "search-indexer-synthetic-alert-3",
+      "description": "Threshold breach linked to Indexing lag detected"
+    }
+  },
+  {
+    "id": "deploy-inc-003",
+    "timestamp": "2026-03-19T00:04:26.553Z",
+    "service": "search-indexer",
+    "kind": "deploy",
+    "severity": "minor",
+    "message": "Deploy 2026.03.21 to production",
+    "source": "mock-deploys",
+    "metadata": {
+      "version": "2026.03.21",
+      "environment": "production"
+    }
+  },
+  {
+    "id": "trace-inc-003",
+    "timestamp": "2026-03-19T00:07:26.553Z",
+    "service": "search-indexer",
+    "kind": "trace",
+    "severity": "minor",
+    "message": "POST /login completed in 460ms",
+    "source": "mock-traces",
+    "metadata": {
+      "operation": "POST /login",
+      "durationMs": 460
+    }
+  },
+  {
+    "id": "log-inc-003",
+    "timestamp": "2026-03-19T00:10:26.553Z",
+    "service": "search-indexer",
+    "kind": "log",
+    "severity": "minor",
+    "message": "Log correlation for inc-003: retry_count=4",
+    "source": "mock-logs",
+    "metadata": {
+      "summary": "Log correlation for inc-003: retry_count=4"
+    }
+  },
+  {
+    "id": "note-inc-003",
+    "timestamp": "2026-03-19T00:13:26.553Z",
+    "service": "search-indexer",
+    "kind": "note",
+    "severity": "info",
+    "message": "priya: Investigating inc-003; latest status shared with the room.",
+    "source": "mock-chat",
+    "metadata": {
+      "author": "priya"
+    }
+  }
+]

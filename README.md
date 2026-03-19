@@ -28,3 +28,13 @@ Manual verification:
 4. Toggle kind filters, service, severity, and time window controls and confirm the URL query string updates
 5. Click an event card and confirm the pinned-event panel appears and the selected event persists in the URL
 6. Confirm `http://localhost:3000/api/normalized_v2?kinds=incident,alert&severity=critical` returns a filtered subset of events
+
+V3 dataset + API verification:
+1. `npm run generate:v3-events`
+2. `npm run dev`
+3. `curl http://localhost:3000/api/v3/events | jq 'length'` should return at least `20`
+4. `curl "http://localhost:3000/api/v3/events?kind=alert" | jq 'map(.kind) | unique'`
+5. `curl "http://localhost:3000/api/v3/events?kind=deploy" | jq '.[0]'`
+6. `curl "http://localhost:3000/api/v3/events?severity=critical" | jq 'map({id,kind,severity,service})'`
+
+The v3 dataset combines incidents, alerts, deploys, traces, logs, and chat notes into a single normalized feed written to `data/normalized_events_v3.json`.
