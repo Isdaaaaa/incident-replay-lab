@@ -13,4 +13,14 @@ APIs:
 
 Utilities:
 - npm run generate:normalized-v2
-- npm test
+- npm run test:normalized
+
+Timeline UI:
+- Visit `/timeline` after generating normalized data
+- `/timeline` reads `data/normalized_events_v2.json` server-side so the page stays consistent with `/api/normalized_v2`
+
+Manual verification:
+1. `npm run generate:normalized-v2`
+2. `npm run dev`
+3. Open `http://localhost:3000/timeline`
+4. Confirm `http://localhost:3000/api/normalized_v2` returns the same normalized events used by the page

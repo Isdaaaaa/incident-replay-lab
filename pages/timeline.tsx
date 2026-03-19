@@ -1,33 +1,22 @@
 import React from 'react'
 import { GetServerSideProps } from 'next'
-import Timeline from '../components/Timeline'
 import fs from 'fs'
 import path from 'path'
+import Timeline from '../components/Timeline'
+import { Event } from '../src/models/event'
 
-type Incident = {
-  id: string
-  service: string
-  severity: string
-  message: string
-  timestamp: string
+export default function Page({ events }: { events: Event[] }) {
+  return <Timeline events={events} />
 }
 
-export default function Page({ incidents }: { incidents: Incident[] }) {
-  return (
-    <div>
-      <Timeline incidents={incidents} />
-    </div>
-  )
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
-    const dataPath = path.join(process.cwd(), 'data', 'mock_incidents.json')
+    const dataPath = path.join(process.cwd(), 'data', 'normalized_events_v2.json')
     const raw = fs.readFileSync(dataPath, 'utf8')
-    const incidents: Incident[] = JSON.parse(raw)
-    return { props: { incidents } }
-  } catch (err) {
-    // fallback to empty list if file missing or parse error
-    return { props: { incidents: [] } }
+    const events: Event[] = JSON.parse(raw)
+
+    return { props: { events } }
+  } catch (error) {
+    return { props: { events: [] } }
   }
 }
