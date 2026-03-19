@@ -1,11 +1,11 @@
 {
   "slug": "incident-replay-lab",
   "repo_path": "/home/inbox_laurence/repos/projects/incident-replay-lab",
-  "current_slice": "more-adapters",
+  "current_slice": "filtering-and-highlighting",
   "branch": "main",
   "status": "in-progress",
   "baton": "pf-build",
   "notes": "unified-event-model completed; timeline-ui ready to assign.",
-  "previous_slice": "timeline-ui",
+  "previous_slice": "more-adapters",
   "previous_pr": "https://github.com/Isdaaaaa/incident-replay-lab/pull/3"
 }
