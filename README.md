@@ -1,5 +1,9 @@
-# Incident Replay Lab
+Minimal Next.js TypeScript scaffold for incident-replay-lab.
 
-This repo contains the code and planning for the Incident Replay Lab portfolio project.
+Run locally:
 
-See PROJECT.md and TODO.md for planning.
+1. npm install
+2. npm run generate:incidents
+3. npm run dev
+
+API: GET /api/mock-incidents
