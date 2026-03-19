@@ -1,16 +1,9 @@
 {
   "slug": "incident-replay-lab",
   "repo_path": "/home/inbox_laurence/repos/projects/incident-replay-lab",
-<<<<<<< HEAD
-  "current_slice": "normalize-events",
-  "branch": "main",
-  "status": "in-review",
-  "notes": "slice/incident-replay-timeline merged to main; waiting for pf-pm final confirmation. Next slice: unified-event-model (SLICES/third-slice.md)."
-=======
   "current_slice": "unified-event-model",
   "branch": "main",
   "status": "in-progress",
   "baton": "pf-build",
   "notes": "Assigned SLICES/third-slice.md to pf-build; awaiting STARTED/DONE lifecycle posts."
->>>>>>> 0f151b8 (chore: assign third slice to pf-build (unified-event-model))
 }
