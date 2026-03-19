@@ -3,8 +3,8 @@
   "repo_path": "/home/inbox_laurence/repos/projects/incident-replay-lab",
   "current_slice": "timeline-ui",
   "branch": "main",
-  "status": "ready-to-assign",
-  "baton": "pf-pm",
+  "status": "in-progress",
+  "baton": "pf-build",
   "notes": "unified-event-model completed; timeline-ui ready to assign.",
   "previous_slice": "unified-event-model",
   "previous_pr": "https://github.com/Isdaaaaa/incident-replay-lab/pull/2"
