@@ -1,0 +1,8 @@
+{
+  "slug": "incident-replay-lab",
+  "repo_path": "/home/inbox_laurence/repos/projects/incident-replay-lab",
+  "current_slice": "normalize-events",
+  "branch": "main",
+  "status": "in-review",
+  "notes": "slice/incident-replay-timeline merged to main; waiting for pf-pm final confirmation. Next slice: unified-event-model (SLICES/third-slice.md)."
+}
