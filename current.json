@@ -1,9 +1,11 @@
 {
   "slug": "incident-replay-lab",
   "repo_path": "/home/inbox_laurence/repos/projects/incident-replay-lab",
-  "current_slice": "unified-event-model",
+  "current_slice": "timeline-ui",
   "branch": "main",
-  "status": "in-progress",
-  "baton": "pf-build",
-  "notes": "Assigned SLICES/third-slice.md to pf-build; awaiting STARTED/DONE lifecycle posts."
+  "status": "ready-to-assign",
+  "baton": "pf-pm",
+  "notes": "Assigned SLICES/third-slice.md to pf-build; awaiting STARTED/DONE lifecycle posts.",
+  "previous_slice": "unified-event-model",
+  "previous_pr": "https://github.com/Isdaaaaa/incident-replay-lab/pull/2"
 }
