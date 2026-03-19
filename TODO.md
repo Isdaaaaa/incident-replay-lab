@@ -2,10 +2,11 @@
 
 - [x] Create project skeleton (Next.js app, backend routes)
 - [x] Add mock incident dataset generator
-- [ ] Implement unified event model (JSON schema)
-- [x] Build timeline UI prototype (scrubber + lanes)
+- [x] Implement unified event model (JSON schema)
+- [x] [x] Build timeline UI prototype (scrubber + lanes)
+- [x] Implement filtering-and-highlighting
 - [ ] Implement import adapters for logs, traces, deploy events, and notes
 - [ ] Simple AI-assisted summary that cites event ids
 
-Completed first slice: project scaffold, mock data, and timeline UI prototype.
-Next slice: implement unified event model and import adapters (see SLICES/second-slice.md)
+Completed: project scaffold, mock data, timeline UI prototype, unified event model, filtering-and-highlighting.
+Next slice: implement additional import adapters (SLICES/fifth-slice.md)

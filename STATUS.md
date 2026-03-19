@@ -2,15 +2,12 @@
 
 Project: Incident Replay Lab
 Repo: /home/inbox_laurence/repos/projects/incident-replay-lab
-Current slice: filtering-and-highlighting (slice/filtering-highlighting)
-Status: implemented locally, verification passed
+Current slice: filtering-and-highlighting
+Status: DONE
 Blocked: none
 
 Last actions:
-- Added reusable filter/query helpers in src/filters.ts
-- Updated /timeline with kind/service/severity/window filters and URL-backed state
-- Added event selection/pinned context UI in the timeline
-- Extended /api/normalized_v2 to support filter query params
-- Verified with npm test and npm run build
+- Implemented filtering-and-highlighting slice (src/filters.ts, components/Timeline.tsx, components/IncidentCard.tsx, pages/timeline.tsx, pages/api/normalized_v2.ts)
+- PR #4 opened and merged into main
 
-Next: commit, push branch, and open PR for pf-pm review
+Next: more-adapters (SLICES/fifth-slice.md) — implement additional import adapters and produce normalized_events_v3.json
