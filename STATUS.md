@@ -2,12 +2,13 @@
 
 Project: Incident Replay Lab
 Repo: /home/inbox_laurence/repos/projects/incident-replay-lab
-Current slice: filtering-and-highlighting
+Current slice: more-adapters
 Status: DONE
 Blocked: none
 
 Last actions:
-- Implemented filtering-and-highlighting slice (src/filters.ts, components/Timeline.tsx, components/IncidentCard.tsx, pages/timeline.tsx, pages/api/normalized_v2.ts)
-- PR #4 opened and merged into main
+- Implemented more-adapters slice (src/models/event.ts, src/adapters/*, scripts/generate_v3_events.ts, pages/api/v3/events.ts)
+- data/normalized_events_v3.json generated (30 events)
+- PR #5 opened: https://github.com/Isdaaaaa/incident-replay-lab/pull/5
 
-Next: more-adapters (SLICES/fifth-slice.md) — implement additional import adapters and produce normalized_events_v3.json
+Next: plan final polish & docs (SLICES/sixth-slice.md) — README finalization, deployment notes, and example walkthroughs.
